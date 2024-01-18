@@ -2,11 +2,13 @@ import Pokedex from "./Pokedex.jsx";
 import '../css/Pokedex.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import InfoPokemon from "./InfoPokemon.jsx";
+import imgLogo from './assets/logo.png';
+
 
 function App() {
   return (
     <div className="pokedexCorpo">
-      <img id="logo" src="../src/assets/logo.png" />
+      <img id="logo" src={imgLogo} />
 
       <BrowserRouter>
                 <Routes>
