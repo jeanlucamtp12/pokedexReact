@@ -6,7 +6,7 @@ import InfoPokemon from "./InfoPokemon.jsx";
 function App() {
   return (
     <div className="pokedexCorpo">
-      <img id="logo" src="./src/assets/logo.png" />
+      <img id="logo" src="../assets/logo.png" />
 
       <BrowserRouter>
                 <Routes>
