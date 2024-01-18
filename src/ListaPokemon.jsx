@@ -35,7 +35,7 @@ function ListaPokemon({ pokemonClicado }) {
     return (
         <div>
             <div className="menuGeracao">
-                <h1 id="textoSelecao">Selecione a Geração</h1>
+                <h1 id="textoSelecao">Selecione a Geração!</h1>
                 <button ref={botaoRef} className="botaoGen" onClick={() => { setInicioGeracao(0); setFimGeracao(151) }}>I</button>
                 <button className="botaoGen" onClick={() => { setInicioGeracao(151); setFimGeracao(100) }}>II</button>
                 <button className="botaoGen" onClick={() => { setInicioGeracao(251); setFimGeracao(135) }}>III</button>
