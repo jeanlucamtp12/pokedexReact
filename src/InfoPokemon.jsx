@@ -1,4 +1,5 @@
 import {useNavigate, useSearchParams, useParams } from 'react-router-dom';
+import imgBotao from './assets/voltar.png';
 
 function InfoPokemon() {
 
@@ -16,7 +17,7 @@ function InfoPokemon() {
 
     return (
         <div className='cardInfo' style={{backgroundColor }}>
-            <img id="botaoVoltar" src='../src/assets/voltar.png' onClick={voltarMenu}/>
+            <img id="botaoVoltar"  src={imgBotao}  onClick={voltarMenu}/>
             <div>
                 <h1 id="nomeInfo">{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
                 <img src={img} />
