@@ -16,7 +16,7 @@ function InfoPokemon() {
 
     return (
         <div className='cardInfo' style={{backgroundColor }}>
-            <img id="botaoVoltar" src='./src/assets/voltar.png' onClick={voltarMenu}/>
+            <img id="botaoVoltar" src='../assets/voltar.png' onClick={voltarMenu}/>
             <div>
                 <h1 id="nomeInfo">{name.charAt(0).toUpperCase() + name.slice(1)}</h1>
                 <img src={img} />
