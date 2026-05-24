@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 {
     "version": 2,
     "routes": [{ "handle": "filesystem" }, { "src": "/.*", "dest": "/index.html" }]
+=======
+{
+    "version": 2,
+    "routes": [{ "handle": "filesystem" }, { "src": "/.*", "dest": "/index.html" }]
+>>>>>>> 5fbb30e908dbd9897c483aeadceb999e8989680f
 }
