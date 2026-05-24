@@ -1,0 +1,283 @@
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(173, 46, 46);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.pokedexCorpo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.pokedexCorpo #logo {
+    margin-bottom: 1rem;
+    width: 200px;
+    max-width: 80%;
+}
+
+.pokedex-container {
+    background-color: rgba(184, 0, 0, 0.603);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    width: auto;         
+    max-width: none;    
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.listaPokemon {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.cardPokemon {
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.192)), url('../src/assets/pokebola.png');
+    background-position: left top;
+    transition: 0.3s;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+.cardPokemon img {
+    width: 100%;
+    height: auto;
+}
+
+.cardPokemon:hover {
+    transform: scale(1.05);
+    outline: 3px solid #2bff00;
+}
+
+.cardPokemon #nomePokemon {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+/* Card Info (Detalhes do Pokémon) */
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.301), rgba(255, 255, 255, 0.192)), url('../src/assets/pokebola.png');
+    background-size: cover;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.cardInfo img {
+    width: 350px;      
+    max-width: 100%;    
+}
+
+#nomeInfo,
+.cardInfo img {
+    margin-right: 0;
+}
+
+.cardInfo h1 {
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: rgb(195, 171, 201);
+    border: 2px solid rgb(35, 53, 155);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+}
+
+#tipo,
+#nomeInfo {
+    border-radius: 0.5rem;
+    border: 2px solid rgb(0, 38, 255);
+    width: auto;
+    max-width: 200px;
+    font-size: 1rem;
+    background-color: rgb(255, 208, 0);
+    padding: 0.5rem;
+    text-align: center;
+    margin: 0.25rem 0;
+}
+
+#botaoVoltar {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin: 0.3rem 0; 
+}
+
+#botaoVoltar:hover {
+    transform: scale(1.2);
+}
+
+/* Menu de Geração */
+.menuGeracao {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+#textoSelecao {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: #f8f6f6;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.botaoGen {
+    background-color: #fffb00d2;
+    border: 2px solid blue;
+    border-radius: 0.5rem;
+    margin: 0.25rem;
+    font-size: 0.875rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.botaoGen:hover,
+.botaoGen:active,
+.botaoGen:focus {
+    transform: scale(1.1);
+    border-color: green;
+}
+
+/* ===== TABLET (min-width: 600px) ===== */
+@media (min-width: 600px) {
+    .listaPokemon {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cardPokemon {
+        max-width: 180px;
+    }
+
+    .cardPokemon #nomePokemon {
+        font-size: 1.125rem;
+    }
+
+    .pokedexCorpo #logo {
+        width: 250px;
+    }
+
+    .cardInfo {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .cardInfo img {
+        width: 180px;
+        margin-bottom: 0;
+    }
+
+    .cardInfo h1 {
+        font-size: 1.5rem;
+    }
+
+    #tipo,
+    #nomeInfo {
+        font-size: 1.125rem;
+    }
+
+    #textoSelecao {
+        font-size: 1.25rem;
+    }
+
+    .botaoGen {
+        font-size: 1rem;
+        width: 50px;
+        height: auto;
+        padding: 0.5rem;
+    }
+}
+
+/* ===== DESKTOP (min-width: 900px) ===== */
+@media (min-width: 900px) {
+    .listaPokemon {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .cardPokemon {
+        max-width: 200px;
+    }
+
+    .cardPokemon #nomePokemon {
+        font-size: 1.25rem;
+    }
+
+    .cardPokemon:hover {
+        transform: scale(1.1);
+        outline: 4px solid #2bff00;
+    }
+
+    .pokedexCorpo #logo {
+        width: 300px;
+    }
+
+    .cardInfo img {
+        width: 220px;
+    }
+
+    .cardInfo h1 {
+        font-size: 1.75rem;
+    }
+
+    #tipo,
+    #nomeInfo {
+        font-size: 1.25rem;
+        max-width: 220px;
+    }
+
+    #textoSelecao {
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;
+    }
+
+    .botaoGen {
+        font-size: 1.125rem;
+        width: 55px;
+    }
+}
+
+ 
+
+
+
+
+
+
+
+
+
